@@ -2,16 +2,14 @@
 	<html>
 		<head>
 			<title>{{ page.title }}</title>
-            <!-- link to main stylesheet -->
             <meta charset="utf-8"/>
 		</head>
 		<body>
-			{{ site.name }}
-			<nav>
-			</nav>
+			{% include header.html %}
+			<nav></nav>
 			<div class="container">
-			
-			{{ content }}
-			
+				{{ content }}
+			</div>
+			{% include footer.html %}
 		</body>
 	</html>
