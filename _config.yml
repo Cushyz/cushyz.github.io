@@ -1,4 +1,12 @@
-title: cushyzink的狗窝
-description: 乱了，就是狗窝…… 
+title: cushyz的狗窝
+description: 乱了就是狗窝了 
+
+nav:
+  - text: 首页
+    url: ''
+  - text: 关于
+    url:  '/about.html'
+  - text: 联系
+    url:  '/contact.html'
 
 email: 553009599@qq.com

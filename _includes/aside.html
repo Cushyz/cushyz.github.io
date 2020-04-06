@@ -1,8 +1,8 @@
 <aside>
-    最近文章:
-    <ul>
+    <dl>
+        <dt>最近文章</dt>
         {% for post in site.posts reversed limit:10 %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        <dd><a href="{{ site.url | append: post.url }}">{{ post.title }}</a></dd>
         {% endfor %}
-    </ul>
+    </dl>
 </aside>

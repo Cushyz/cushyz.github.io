@@ -2,15 +2,24 @@
 	<html>
 		<head>
 			<title>{{ page.title }}</title>
-            <meta charset="utf-8"/>
+			<meta charset="utf-8"/>
+			<link href="{{site.url}}/css/style.css" type="text/css" rel="stylesheet" />
 		</head>
 		<body>
+			<div class="wrapper">
 			{% include header.html %}
-			<nav></nav>
-			<article>
-				{{ content }}
-			</article>
-			{% include aside.html %}
-			{% include footer.html %}
+				<nav>
+					<ul>
+						{% for item in site.nav %}
+        				<li><a href="{{ site.url | append: item.url }}">{{ item.text }}</a></li>
+        				{% endfor %}
+					</ul>
+				</nav>
+				<article>
+					{{ content }}
+				</article>
+				{% include aside.html %}
+				{% include footer.html %}
+			</div>
 		</body>
 	</html>

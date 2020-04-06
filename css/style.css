@@ -1,0 +1,93 @@
+---
+---
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+body{
+	padding: 1.25rem;
+	background-image: url({{site.url}}/assets/background.gif);
+}
+.wrapper{
+	width: 100%;
+	display: grid;	
+	grid-template-columns: auto 15rem;
+	max-width: 70rem;
+	margin: 0 auto;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	box-shadow: 0 0 20px black;
+}
+header,nav,footer{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+header{
+	padding: 10px;
+	background-color: darkgray;
+}
+nav{
+	background-color: steelblue;
+}
+nav ul{
+	margin-left: 20px;
+	font-size: 0;
+}
+nav li{
+	display:inline-block;
+	height: auto;
+}
+nav a{
+	margin: 0;
+	display:inline-block;
+	padding:0.5rem 0.7rem;
+	font-size: 1.25rem;
+	color: aliceblue;
+	transition: color 0.5s;
+	transition: background-color 0.5s;
+}
+
+nav a:hover{
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+}
+
+aside{
+	background-color: seashell;
+	padding: 1rem;
+}
+aside dt{
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding: 0.4rem;
+}
+aside dd{
+	font-size: 1rem;
+	list-style:none;  
+	display: block;
+	margin-left: 1rem;
+}
+aside dd+dd{
+	border-top: grey solid 1px;
+}
+aside a{
+	display: block;
+	padding: 0.3rem;
+}
+
+
+footer{
+	text-align: center;
+	background-color: royalblue;
+	color: lightgray;
+	padding:1.25rem;
+}
+article{
+	background-color: aliceblue;
+	padding: 1.25rem;
+	min-height: 30rem;
+}
