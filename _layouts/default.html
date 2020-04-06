@@ -7,9 +7,10 @@
 		<body>
 			{% include header.html %}
 			<nav></nav>
-			<div class="container">
+			<article>
 				{{ content }}
-			</div>
+			</article>
+			{% include aside.html %}
 			{% include footer.html %}
 		</body>
 	</html>
