@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: 你好！jekyll
+tags: 杂
 ---
 
 感谢github的pages服务

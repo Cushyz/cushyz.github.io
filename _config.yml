@@ -1,12 +1,12 @@
-title: cushyz的狗窝
+title: Cushyz的狗窝
 description: 乱了就是狗窝了 
+url: ''
+email: 553009599@qq.com
 
 nav:
   - text: 首页
-    url: ''
+    url: '/'
   - text: 关于
     url:  '/about.html'
   - text: 联系
     url:  '/contact.html'
-
-email: 553009599@qq.com

@@ -10,7 +10,7 @@ a{
 }
 body{
 	padding: 1.25rem;
-	background-image: url({{site.url}}/assets/background.gif);
+	background-image: url({{site.baseurl}}/assets/background.gif);
 }
 .wrapper{
 	width: 100%;
@@ -20,7 +20,7 @@ body{
 	margin: 0 auto;
 	border-radius: 0.2rem;
 	overflow: hidden;
-	box-shadow: 0 0 20px black;
+	box-shadow: 0 0 10px black;
 }
 header,nav,footer{
 	grid-column-start: 1;
@@ -72,14 +72,12 @@ aside dd{
 	margin-left: 1rem;
 }
 aside dd+dd{
-	border-top: grey solid 1px;
+	border-top: rgba(0,0,0,0.2) solid 1px;
 }
 aside a{
 	display: block;
 	padding: 0.3rem;
 }
-
-
 footer{
 	text-align: center;
 	background-color: royalblue;
@@ -90,4 +88,26 @@ article{
 	background-color: aliceblue;
 	padding: 1.25rem;
 	min-height: 30rem;
+	overflow: auto;
+}
+
+@media screen and (max-width: 800px) {
+	body{
+		padding: 0.5em;
+		background-image: url({{site.baseurl}}/assets/background.gif);
+		background-attachment: fixed;
+	}
+	article{
+		background-color: aliceblue;
+		padding: 1.25rem;
+		min-height: 5rem;
+	}
+	.wrapper{
+		width: 100%;
+		display: block;	
+		margin: 0 auto;
+		border-radius: 0;
+		overflow: auto;
+		box-shadow: none;
+	}
 }

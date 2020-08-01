@@ -1,0 +1,40 @@
+code{
+    display: block;
+    background: #232B2B;
+    color: white;
+    padding: 1em;
+    margin: 0.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+code .k{
+    color: moccasin;
+}
+code .kd{
+    color: dodgerblue;
+    font-weight: bold;
+}
+code .p{
+    color: white;
+}
+code .mi{
+    color:lightcoral ;
+}
+code .nx{
+    color: lightblue;
+}
+code .dl,code .s2,code .s1{
+    color: lightgreen;
+}
+code .se{
+    color: lightsalmon;
+}
+
+code.highlighter-rouge{
+    display: inline;
+    color:dimgrey;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid darkgrey;
+    padding: 2px;
+    border-radius: 4px;
+    font-weight: bold;;
+}

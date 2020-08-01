@@ -5,6 +5,7 @@
 			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 			<link href="{{site.baseurl}}/css/style.css" type="text/css" rel="stylesheet" />
 			<link href="{{site.baseurl}}/css/articlestyle.css" type="text/css" rel="stylesheet" />
+			<link href="{{site.baseurl}}/css/codestyle.css" type="text/css" rel="stylesheet" />
 			<link rel="icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon" />
 			<title>{{ page.title }}</title>
 		</head>
@@ -20,6 +21,12 @@
 				</nav>
 				<article>
 					{{ content }}
+					<span class="date">{{ page.date | date: "— %Y年%m月%d日"  }}</span>
+					<!--<span class="tags">Tag: 
+						{% for tg in page.tags %}
+							{{ tg }}						
+						{% endfor %}
+					</span>-->
 				</article>
 				{% include aside.html %}
 				{% include footer.html %}

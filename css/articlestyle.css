@@ -1,0 +1,79 @@
+article h1,article h2,article h3,article h4,article h5,article h6{
+    text-align: center;
+}
+article h1{
+}
+article p{
+    text-indent: 1.5em;
+    line-height: 1.8em;
+}
+
+article .date{
+    display: block;
+    text-align: right;
+    color:grey;
+}
+
+article blockquote{
+    background: rgba(0,0,0,0.1);
+    border-left: solid dimgray 4px;
+    padding: 0.8em 1.5em ;
+    margin: 0 1em;
+}
+article blockquote>p{
+    color: dimgray;
+    text-indent: 1em;
+}
+
+article table{
+    margin: 1em auto;
+    border-collapse: collapse;
+    text-align: center;
+    border: 2px solid rgba(0,0,0,0.2);
+}
+article table>thead{
+    background: lavender;
+    border-collapse:collapse;
+}
+article table td,article table th{
+    padding: 0.5em 1em;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-weight: normal;
+}
+article table th{
+    color: white;
+    background: dimgray;
+    text-emphasis: none;
+}
+
+article table tr:nth-child(odd){
+    background: white;
+}
+article table tr:nth-child(even){
+    background: whitesmoke
+}
+
+article hr{
+    margin: 0.8em 0;
+    border: solid 1px gray;
+}
+
+article ul,article ol{
+    margin: 0.5em;
+    margin-left: 2em;
+}
+article li{
+    padding: 0 0.3em;
+}
+
+article a{
+    text-decoration: underline;
+    color: dodgerblue
+}
+article img{
+    display: block;
+    margin: auto;
+    padding: 1em;
+    background: white;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+}

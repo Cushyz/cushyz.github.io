@@ -2,7 +2,7 @@
     <dl>
         <dt>最近文章</dt>
         {% for post in site.posts reversed limit:10 %}
-        <dd><a href="{{ site.url | append: post.url }}">{{ post.title }}</a></dd>
+        <dd><a href="{{ site.baseurl | append: post.url }}">{{ post.title }}</a></dd>
         {% endfor %}
     </dl>
 </aside>
