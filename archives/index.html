@@ -1,14 +1,12 @@
 ---
 layout: noaside
-title: 首页
+title: My Blog
 ---
 
-<p>是的，之前的服务器没有了:(</p>
-<p>不过你可以看看我新写的东西:</p>
 
 <link href="{{site.baseurl}}/css/articlelist.css" type="text/css" rel="stylesheet" />
 <div class="articlelist">
-{% for post in site.posts limit:3 %}
+{% for post in paginator.posts %}
     {% if page.title != post.title %}
     {% assign link = site.baseurl | append: post.url %}
     {% assign aele = '…… <br/> <a class="morelink" href="[]" >更多</a>' | replace:"[]",link %}
@@ -18,5 +16,15 @@ title: 首页
         </div>
     {% endif %}
 {% endfor %}
-<div class="last"><a href="/archives.html">更多文章</a></div>
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/{{ paginator.previous_page }}" class="previous">上一页</a>
+  {% endif %}
+
+  <span class="page_number "> {{ paginator.page }} / {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="/{{ paginator.next_page }}" class="next">下一页</a>
+  {% endif %}
 </div>

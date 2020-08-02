@@ -13,9 +13,9 @@ nav:
   - text: 联系
     url:  '/contact.html'
   - text: 文章列表
-    url:  '/archives.html'
+    url:  '/archives'
 
 gems: [jekyll-paginate]
 paginate: 1
-paginate_path: "archs/:num/"
+paginate_path: "archives/:num/"
 
