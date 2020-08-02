@@ -24,7 +24,7 @@ title: 文章列表
     <a href="{{site.baseurl}}/archives/" class="previous">上一页</a>
     {% endif %}
   {% else %}
-  <span class="previous"></a>
+  <span class="previous"></span>
   {% endif %}
   <span class="page_number "> {{ paginator.page }} / {{ paginator.total_pages }}</span>
   <form action="javascript:void(0)" 
@@ -35,7 +35,7 @@ title: 文章列表
   {% if paginator.next_page %}
     <a href="{{site.baseurl}}/archives/{{ paginator.next_page }}" class="next">下一页</a>
   {% else %}
-  <span class="next"></a>
+    <span class="next"></span>
   {% endif %}
 </div>
 <script type="text/javascript">
@@ -44,7 +44,7 @@ title: 文章列表
     let ipt=form.querySelector('input[type="text"]');
     let v = parseInt(ipt.value);
     ipt.value='';
-    if(v && v < {{paginator.total_pages}}){
+    if(v && v>=1 && v =< {{paginator.total_pages}} ){
       v=v=='1'?"":v;
       window.location.href=base+v;
     }
@@ -52,14 +52,8 @@ title: 文章列表
   }
 </script>
 <style type="text/css">
-  *{
-    padding: 0;
-    margin: 0;
-  }
-  body{
-    width: 100%;
-  }
   .pagination{
+    padding: 1em 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
