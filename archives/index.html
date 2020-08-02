@@ -44,7 +44,7 @@ title: 文章列表
     let ipt=form.querySelector('input[type="text"]');
     let v = parseInt(ipt.value);
     ipt.value='';
-    if(v && v>=1 && v =< {{paginator.total_pages}} ){
+    if(v && v>=1 && v <= {{paginator.total_pages}} ){
       v=v=='1'?"":v;
       window.location.href=base+v;
     }
