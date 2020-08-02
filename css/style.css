@@ -10,7 +10,6 @@ a{
 }
 body{
 	padding: 1.25rem;
-	min-width: 400px;
 	background-image: url({{site.baseurl}}/assets/background.gif);
 }
 .wrapper{
@@ -105,7 +104,6 @@ article{
 		padding: 0.5em;
 		background-image: url({{site.baseurl}}/assets/background.gif);
 		background-attachment: fixed;
-		min-width: unset;
 	}
 	article{
 		background-color: aliceblue;
