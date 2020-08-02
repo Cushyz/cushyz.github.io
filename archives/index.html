@@ -25,9 +25,82 @@ title: My Blog
     {% else %}
     <a href="{{site.baseurl}}/archives/" class="previous">上一页</a>
     {% endif %}
+  {% else %}
+  <span class="previous"></a>
   {% endif %}
   <span class="page_number "> {{ paginator.page }} / {{ paginator.total_pages }}</span>
+  <form action="javascript:void(0)" 
+					onsubmit="return gotopage(this)">
+		<input type="text" maxlength="2"/>
+		<input type="submit" value="跳到" />
+	</form>
   {% if paginator.next_page %}
     <a href="{{site.baseurl}}/archives/{{ paginator.next_page }}" class="next">下一页</a>
+  {% else %}
+  <span class="next"></a>
   {% endif %}
 </div>
+<script type="text/javascript">
+  function gotopage(form){
+    let base="{{site.baseurl}}/archives/";
+    let ipt=form.querySelector('input[type="text"]');
+    let v = parseInt(ipt.value);
+    ipt.value='';
+    if(v && v < {{paginator.total_pages}}){
+      v=v=='1'?"":v;
+      window.location.href=base+v;
+    }
+    return false;
+  }
+</script>
+<style type="text/css">
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    width: 100%;
+  }
+  .pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .pagination > form > input[type="submit"]{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin: 0;
+  }
+  .pagination > form > input[type="text"]{
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0;
+    width: 1.5em;
+    font-size: 1.2em;
+    border: none;
+    outline: white 2px solid;
+  }
+  .pagination > a{
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  .pagination > a:hover{
+    background-color: royalblue;
+  }
+  .pagination > *{
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    margin: 0 0.2em;
+    padding: 0.3em 0.8em;
+    height: 1.5em;
+  }
+  .pagination > .previous{
+    border-radius: 8px 0 0 8px;
+  }
+  .pagination > .next{
+    border-radius: 0 8px 8px 0;
+  }
