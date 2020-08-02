@@ -1,0 +1,39 @@
+a.morelink{
+    display: block;
+    float: right;
+    color: white;
+    padding: 0.2em 0.5em;
+    background: skyblue;
+    border-radius: 0.4em;
+}
+.articlelist{
+    display: block;
+    padding: 0.3em;
+    flex-direction: column;
+}
+.articlelist .one:first-of-type{
+    margin-top: 0;
+}
+.articlelist .one{
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border-left: rgb(135, 206, 235) solid 3px;
+    background-color: rgba(135, 206, 235,0.1);
+    overflow: hidden;
+}
+.articlelist .last{
+    margin-top: 1em;
+    text-align: right;
+    font-size: 1.5em;
+}
+.articlelist .one .cntnt{
+    color:dimgrey;
+    border-top: rgb(0,0,0,0.2) 2px solid;
+    padding: 0.5em 1em;
+}
+.articlelist .one > h1{
+    font-size: 2em;
+}
+.articlelist .one .cntnt h1,.articlelist .one .cntnt h2 {
+    font-size: 1.5em;
+}

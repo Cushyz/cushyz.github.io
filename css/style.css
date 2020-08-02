@@ -10,6 +10,7 @@ a{
 }
 body{
 	padding: 1.25rem;
+	min-width: 400px;
 	background-image: url({{site.baseurl}}/assets/background.gif);
 }
 .wrapper{
@@ -28,7 +29,15 @@ header,nav,footer{
 }
 header{
 	padding: 10px;
+	{% if site.headpic %}
+	color: white;
+	height: 400px;
+	background-image: url({{site.baseurl | append: site.headpic }});
+	background-size: cover;
+	background-position: center;
+	{% else %}
 	background-color: darkgray;
+	{% endif %}
 }
 nav{
 	background-color: steelblue;

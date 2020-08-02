@@ -9,6 +9,13 @@
 			<title>{{ page.title }}</title>
 		</head>
 		<body>
+			<style type="text/css">
+				.wrapper{
+					width: 100%;
+					display: block;	
+					max-width: 60rem;
+				}
+			</style>
 			<div class="wrapper">
 			{% include header.html %}
 				<nav>
@@ -21,7 +28,6 @@
 				<article>
 					{{ content }}
 				</article>
-				{% include aside.html %}
 				{% include footer.html %}
 			</div>
 		</body>

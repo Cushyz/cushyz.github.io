@@ -3,6 +3,8 @@ description: 乱了就是狗窝了
 url: ''
 email: 553009599@qq.com
 
+headpic: null
+
 nav:
   - text: 首页
     url: '/'
@@ -10,3 +12,10 @@ nav:
     url:  '/about.html'
   - text: 联系
     url:  '/contact.html'
+  - text: 文章列表
+    url:  '/archives.html'
+
+gems: [jekyll-paginate]
+paginate: 1
+paginate_path: "archs/:num/"
+
