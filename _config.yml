@@ -16,6 +16,6 @@ nav:
     url:  '/archives'
 
 gems: [jekyll-paginate]
-paginate: 1
+paginate: 5
 paginate_path: "archives/:num/"
 
