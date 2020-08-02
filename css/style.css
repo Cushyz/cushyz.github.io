@@ -105,6 +105,7 @@ article{
 		padding: 0.5em;
 		background-image: url({{site.baseurl}}/assets/background.gif);
 		background-attachment: fixed;
+		min-width: unset;
 	}
 	article{
 		background-color: aliceblue;
