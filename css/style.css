@@ -132,22 +132,9 @@ article hr{
     padding: 0 4px;
 }
 @media screen and (max-width: 800px){
-    #title>h1{
-        font-size: 2em;
-    }
-    #title>h2{
-        font-size: 1em;
-    }
     #navli>li{
         display: block;
         margin:0;
-    }
-    header{
-        position: relative;
-    }
-    #title{
-        bottom: 1em;
-        left: 0;
     }
     #center{
         display: block;

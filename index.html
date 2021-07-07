@@ -4,13 +4,13 @@ title: 首页
 ---
 
 
-<article>
 {% for post in site.posts limit:3 %}
+<article>
     {% if page.title != post.title %}
     {% assign link = site.baseurl | append: post.url %}
     {% assign aele = '…… <br/> <a class="morelink" href="[]" >更多</a>' | replace:"[]",link %}
             <h1><a href="{{ link }}">{{ post.title }}</a></h1>
             <div class="cntnt">{{ post.content | truncate:202,aele }}</div>
     {% endif %}
-{% endfor %}
 <article>
+{% endfor %}

@@ -25,3 +25,19 @@ header{
 #title>hr{
     border: solid 1px white;
 }
+
+@media screen and (max-width: 800px){
+    #title>h1{
+        font-size: 2em;
+    }
+    #title>h2{
+        font-size: 1em;
+    } 
+    header{
+        position: relative;
+    }
+    #title{
+        bottom: 1em;
+        left: 0;
+    }
+}
