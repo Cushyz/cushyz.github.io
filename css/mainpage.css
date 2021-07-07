@@ -5,6 +5,7 @@ header{
     background-image: url("/assets/headpic.png");
     background-repeat: no-repeat;
     background-size:cover;
+    position: relative;
 }
 #title{
     position: absolute;
@@ -33,9 +34,6 @@ header{
     #title>h2{
         font-size: 1em;
     } 
-    header{
-        position: relative;
-    }
     #title{
         bottom: 1em;
         left: 0;

@@ -91,6 +91,7 @@ footer{
     width: 80%;
     max-width: 1080px;
     height: auto;
+    min-height: 75vh;
     margin:0 auto;
     padding: 0;
     background-color:rgba(0,0,0,0.3);
@@ -139,7 +140,7 @@ article hr{
     #center{
         display: block;
         width: 100%;
-        background-color: transparent;
+        background-color: rgba(0,0,0,0.1);
         padding: 0;
         margin: 0 auto;
         overflow: hidden;
