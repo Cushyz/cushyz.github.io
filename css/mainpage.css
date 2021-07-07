@@ -2,7 +2,7 @@ header{
     width: 100%;
     height: 100vh;
     background-position: center;
-    background-image: url("http://photogz.photo.store.qq.com/psc?/V14MANaD41Lr6Z/TmEUgtj9EK6.7V8ajmQrEPc7VO6nuh8ytWoelIFcp82NBCoI7QRaz74PT*ehTy58NjnjNyeBW*sPrKf6hldXoQJcZ5yjmP0RoObxIjlvcHU!/b&bo=oAU4BAAAAAADZ9s!&rf=viewer_4&t=5");
+    background-image: url("/assets/headpic.png");
     background-repeat: no-repeat;
     background-size:cover;
 }
