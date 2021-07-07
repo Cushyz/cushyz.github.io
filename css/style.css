@@ -22,7 +22,7 @@ nav{
     background-color: steelblue;
     top: 0;
     position: sticky;
-    box-shadow: 0 1px 5px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
 }
 #navbt{
     display: none;
@@ -84,7 +84,7 @@ footer{
     color: white;
     font-size: 1.2em;
     padding: 1em;
-    
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
 }
 #center{
     --mag: 3.5em;
@@ -106,7 +106,8 @@ footer{
     width: 15em;
 }
 #cleft>article,#cright>aside{
-    box-shadow: 0 1px 5px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 #cleft>article{
     margin: 2em 1em 2em var(--mag);
@@ -131,6 +132,19 @@ article hr{
 .sidelist{
     list-style: none;
     padding: 0 4px;
+}
+.sidelist>dd{
+    margin: 0 0.5em;
+}
+
+a.morelink{
+    background-color: darkcyan;
+    padding: 0.3em 0.4em;
+    float: right;
+    color: white;
+    border-radius: 2px;
+    display: block;
+    
 }
 @media screen and (max-width: 800px){
     #navli>li{
