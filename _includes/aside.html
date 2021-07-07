@@ -1,10 +1,9 @@
 <aside>
-    <dl>
-        <dt>最近文章</dt>
-
+    <dl class="sidelist">
+        <dt>最近文章：</dt>
         {% for post in site.posts reversed limit:10 %}
         {% if page.title != post.title %}
-        <dd><a href="{{ site.baseurl | append: post.url }}">{{ post.title }}</a></dd>
+            <dd><a class="sidelink" href="{{ site.baseurl | append: post.url }}">{{ post.title }}</a></dd>
         {% endif %}
         {% endfor %}
     </dl>

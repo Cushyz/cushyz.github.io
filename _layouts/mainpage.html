@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			{% include basis.html %}
+			<link href="{{site.baseurl}}/css/mainpage.css" type="text/css" rel="stylesheet" />
+		</head>
+		<body>
+			<div id="wrapper">
+				{% include header.html %}
+				{% include nav.html %}
+				<div id="center">
+					<div id="cleft">
+						{{ content }}
+					</div>
+					<div id="cright">
+						{% include aside.html %}
+					</div>
+				</div>
+				{% include footer.html %}
+				</div>
+		</body>
+	</html>

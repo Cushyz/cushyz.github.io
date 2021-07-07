@@ -1,22 +1,16 @@
 ---
-layout: noaside
+layout:  mainpage
 title: 首页
 ---
 
-<p>是的，之前的服务器没有了:(</p>
-<p>不过你可以看看我新写的东西:</p>
 
-<link href="{{site.baseurl}}/css/articlelist.css" type="text/css" rel="stylesheet" />
-<div class="articlelist">
 {% for post in site.posts limit:3 %}
     {% if page.title != post.title %}
     {% assign link = site.baseurl | append: post.url %}
     {% assign aele = '…… <br/> <a class="morelink" href="[]" >更多</a>' | replace:"[]",link %}
-        <div class="one">
+        <article>
             <h1><a href="{{ link }}">{{ post.title }}</a></h1>
             <div class="cntnt">{{ post.content | truncate:202,aele }}</div>
-        </div>
+        <article>
     {% endif %}
 {% endfor %}
-<div class="last"><a href="/archives">更多文章</a></div>
-</div>

@@ -1,0 +1,9 @@
+<nav>
+    <span id="navbt">展示菜单</span>
+    <ul id="navli">
+        {% for item in site.nav %}
+        <li><a class="navlink" href="{{ site.baseurl | append: item.url }}">{{ item.text }}</a></li>
+        {% endfor %}
+    </ul>
+    <span id="sidebt">&lt;</span>
+</nav>

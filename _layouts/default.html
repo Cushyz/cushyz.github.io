@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<meta charset="utf-8"/>
-			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-			<link href="{{site.baseurl}}/css/style.css" type="text/css" rel="stylesheet" />
+			{% include basis.html %}
 			<link href="{{site.baseurl}}/css/default.css" type="text/css" rel="stylesheet" />
-			<link rel="icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon" />
-			<title>{{ page.title }}</title>
 		</head>
 		<body>
-			<div class="wrapper">
-			{% include header.html %}
-				<nav>
-					<ul>
-						{% for item in site.nav %}
-        				<li><a href="{{ site.baseurl | append: item.url }}">{{ item.text }}</a></li>
-        				{% endfor %}
-					</ul>
-				</nav>
-				<article>
-					{{ content }}
-				</article>
-				{% include aside.html %}
+			<div id="wrapper">
+				{% include header.html %}
+				{% include nav.html %}
+				<div id="center">
+					<div id="cleft">
+						<article>
+							{{ content }}
+						</article>
+					</div>
+					<div id="cright">
+						{% include aside.html %}
+					</div>
+				</div>
 				{% include footer.html %}
-			</div>
+				</div>
 		</body>
 	</html>
