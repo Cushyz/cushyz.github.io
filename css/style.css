@@ -16,11 +16,6 @@ a{
     text-decoration: none;
     color: black;
 }
-article a{
-    text-decoration: underline;
-    color: dodgerblue
-}
-
 nav{
     display: block;
     background-color: steelblue;
@@ -145,7 +140,6 @@ article hr{
 }
 a.titlelink{
     color: black;
-    text-decoration: none;
 }
 a.sidelist{
     color: dimgrey;
