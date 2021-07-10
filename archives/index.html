@@ -1,26 +1,22 @@
 ---
-layout: single
+layout: default
 title: 文章列表
 ---
 
-<p>
-  我还在写呢！
-</p>
-<!--
-<link href="{{site.baseurl}}/css/articlelist.css" type="text/css" rel="stylesheet" />
-<div class="articlelist">
 {% for post in paginator.posts %}
     {% if page.title != post.title %}
     {% assign link = site.baseurl | append: post.url %}
     {% assign aele = '…… <br/> <a class="morelink" href="[]" >更多</a>' | replace:"[]",link %}
-        <div class="one">
-            <h1><a href="{{ link }}">{{ post.title }}</a></h1>
-            <div class="cntnt">{{ post.content | truncate:202,aele }}</div>
-        </div>
+        <article class="lblock">
+          <a class="morelink" href="{{link}}" >更多</a>
+          <h1><a href="{{ link }}">{{ post.title }}</a></h1>
+          <hr/>
+          <div class="cntnt">{{ post.content | truncate:200,'……' }}</div>
+      </article>
     {% endif %}
 {% endfor %}
-</div>
 
+<div class="lblock">
 <div class="pagination">
   {% if paginator.previous_page %}
     {% if paginator.previous_page != 1 %}
@@ -43,6 +39,8 @@ title: 文章列表
     <span class="next"></span>
   {% endif %}
 </div>
+</div>
+
 <script type="text/javascript">
   function gotopage(form){
     let base="{{site.baseurl}}/archives/";
@@ -85,11 +83,11 @@ title: 文章列表
     transition: background-color 0.2s;
   }
   .pagination > a:hover{
-    background-color: royalblue;
+    background-color: plum;
   }
   .pagination > *{
     display: block;
-    background-color: dodgerblue;
+    background-color: palevioletred;
     color: white;
     margin: 0 0.2em;
     padding: 0.3em 0.8em;
@@ -102,4 +100,3 @@ title: 文章列表
     border-radius: 0 8px 8px 0;
   }
 </style>
--->

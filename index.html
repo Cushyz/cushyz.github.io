@@ -4,7 +4,8 @@ title: 首页
 ---
 
 <div  class="lblock">
-    <p>这是一些我最新的文章：</p>
+    <p>下面是一些我最新的文章</p>
+    <p>在这里查看更多：<a href="/archives/">所有文章</a></p>
 </div>
 {% for post in site.posts limit:5 %}
     {% if page.title != post.title %}
