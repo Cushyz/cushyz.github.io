@@ -5,7 +5,11 @@ header{
     background-image: url("/assets/headpic.png");
     background-repeat: no-repeat;
     background-size:cover;
+}
+head>div.ctbox{
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 #title{
     position: absolute;

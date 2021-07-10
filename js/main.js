@@ -1,6 +1,6 @@
 var mnhd = true;
 var sdhd = true;
-(function(){
+window.onload=function(){
     let nbt = document.getElementById("navbt");
     let sbt = document.getElementById("sidebt");
     let li = document.getElementById("navli");
@@ -23,4 +23,4 @@ var sdhd = true;
         }
         sdhd = !sdhd;
     });
-})();
+}

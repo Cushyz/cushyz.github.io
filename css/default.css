@@ -3,10 +3,17 @@ header {
 	height: 200px;
 	background-position: top;
 	background-image: url("/assets/headpic.png");
+    background-color: #172b24;
 	background-repeat: no-repeat;
 	background-size: auto 1080px;
-	position: relative;
 	background-clip: border-box;
+}
+head>div.ctbox{
+    margin: 0,auto;
+    height: 100%;
+    position: relative;
+    width: 80%;
+    max-width: 1080px;
 }
 #title{
     position: absolute;
@@ -26,4 +33,11 @@ header {
 }
 #title>hr{
     border: solid 1px white;
+}
+
+@media screen and (max-width: 800px){
+    head>div.ctbox{
+        height: 100%;
+        width: 100%;
+    }
 }
