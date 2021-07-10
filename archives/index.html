@@ -9,7 +9,7 @@ title: 文章列表
     {% assign aele = '…… <br/> <a class="morelink" href="[]" >更多</a>' | replace:"[]",link %}
         <article class="lblock">
           <a class="morelink" href="{{link}}" >更多</a>
-          <h1><a href="{{ link }}">{{ post.title }}</a></h1>
+          <h1><a class="titlelink" href="{{ link }}">{{ post.title }}</a></h1>
           <hr/>
           <div class="cntnt">{{ post.content | truncate:200,'……' }}</div>
       </article>

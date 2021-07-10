@@ -12,7 +12,7 @@ title: 首页
     {% assign link = site.baseurl | append: post.url %}
     <article class="lblock">
         <a class="morelink" href="{{link}}" >更多</a>
-        <h1><a href="{{ link }}">{{ post.title }}</a></h1>
+        <h1><a class="titlelink" href="{{ link }}">{{ post.title }}</a></h1>
         <hr/>
         <div class="cntnt">{{ post.content | truncate:200,'……' }}</div>
     </article>
