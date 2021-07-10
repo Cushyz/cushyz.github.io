@@ -1,6 +1,6 @@
 var mnhd = true;
 var sdhd = true;
-window.onload = function () {
+(function(){
     let nbt = document.getElementById("navbt");
     let sbt = document.getElementById("sidebt");
     let li = document.getElementById("navli");
@@ -23,4 +23,4 @@ window.onload = function () {
         }
         sdhd = !sdhd;
     });
-}
+})();

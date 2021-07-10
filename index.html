@@ -3,11 +3,13 @@ layout:  mainpage
 title: 首页
 ---
 
-
-{% for post in site.posts limit:3 %}
+<div  class="lblock">
+    <p>这是一些我最新的文章：</p>
+</div>
+{% for post in site.posts limit:5 %}
     {% if page.title != post.title %}
     {% assign link = site.baseurl | append: post.url %}
-    <article>
+    <article class="lblock">
         <a class="morelink" href="{{link}}" >更多</a>
         <h1><a href="{{ link }}">{{ post.title }}</a></h1>
         <hr/>

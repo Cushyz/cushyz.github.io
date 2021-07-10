@@ -11,12 +11,12 @@
     width: 100%;
     background-attachment: fixed;
     background-image: url('/assets/background.gif');
+    background-color: #172b24;
 }
 a{
     text-decoration: none;
     color: black;
 }
-
 nav{
     display: block;
     background-color: steelblue;
@@ -41,12 +41,13 @@ nav{
     cursor: pointer;
     --r:0.7em;
     background-color: rgba(0,0,0,0.4);
+    background-image: url("/assets/button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
     position: fixed;
-    font-size: 1.5em;
     top: 0.3em;
     right: 0.3em;
-    vertical-align: middle;
-    text-align: center;
     width: calc(var(--r)*2);
     height: calc(var(--r)*2);
     border-radius: var(--r);
@@ -105,16 +106,18 @@ footer{
 #cright{
     width: 15em;
 }
-#cleft>article,#cright>aside{
+.lblock,#cright>aside{
     box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
     overflow: hidden;
 }
-#cleft>article{
+.lblock{
     margin: 2em 1em 2em var(--mag);
     width: calc(100%-1em-var(--mag));
     background-color:aliceblue;
-    border-left: solid 5px palevioletred;
     padding: 1.2em 1.5em;
+}
+article.lblock{
+    border-left: solid 5px palevioletred;
 }
 #cright>aside{
     margin: 2em var(--mag) 2em 1em;
@@ -161,11 +164,11 @@ a.morelink{
     }
     #sidebt{
         display: block;
-        transform: rotate(0);
+        transform: rotate(180deg);
         transition: transform 0.3s;
     }
     #sidebt.clicked{
-        transform: rotate(180deg);
+        transform: rotate(0);
     }
     #navbt{
         display: block;
@@ -185,7 +188,7 @@ a.morelink{
     #cleft{
         margin: 0;
     }
-    #cleft>article{
+    #cleft>.lblock{
         margin: 1em auto;
         width: 81%;
     }
