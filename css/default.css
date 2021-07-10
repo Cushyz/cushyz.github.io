@@ -8,8 +8,8 @@ header {
 	background-size: auto 1080px;
 	background-clip: border-box;
 }
-head>div.ctbox{
-    margin: 0,auto;
+header>div.ctbox{
+    margin: 0 auto;
     height: 100%;
     position: relative;
     width: 80%;
@@ -36,7 +36,7 @@ head>div.ctbox{
 }
 
 @media screen and (max-width: 800px){
-    head>div.ctbox{
+    header>div.ctbox{
         height: 100%;
         width: 100%;
     }
