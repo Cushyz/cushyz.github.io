@@ -14,7 +14,7 @@
     document.addEventListener("DOMContentLoaded", ()=>{
     	let e=document.getElementById("content");
     	if(e==null)return;
-        renderMathInElement(, {
+        renderMathInElement(e, {
           //output: "mathml", //edge didn't support mathml
           delimiters: [
               {left: '$$', right: '$$', display: true},
