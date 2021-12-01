@@ -2,10 +2,12 @@
     font-family:HMOSsans;
     src: url('/assets/HarmonyOS_Sans_SC_Medium.ttf');
 }
-*:not(.katex){
-    font-family:HMOSsans;
+*{
     margin: 0;
     padding: 0;
+}
+body{
+    font-family:HMOSsans;
 }
 #wrapper{
     width: 100%;
