@@ -19,6 +19,7 @@ a{
     color: black;
 }
 nav{
+    z-index: 9999;
     display: block;
     background-color: steelblue;
     top: 0;
