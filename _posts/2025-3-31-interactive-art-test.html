@@ -15,11 +15,12 @@ tags: 美术
 <style>
     #out{
       position: relative;
-      width: calc(100% - 20em);
+      width: 100%;
       margin: 0 auto;
       aspect-ratio: 5 / 4;
       background: black;
       overflow: hidden;
+      box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
     }
 
     #out::after{
@@ -36,6 +37,8 @@ tags: 美术
       position: absolute;
       height:100%;
       width:100%;   
+      padding: 0;
+      background: transparent;
       background-size: contain !important;
       z-index: 100;
       transition: transform 0.1s linear;
