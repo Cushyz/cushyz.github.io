@@ -1,0 +1,91 @@
+---
+
+layout: post
+title: 动态作品测试
+tags: 美术
+
+---
+
+
+<style>
+    #out{
+      position: relative;
+      width: calc(100% - 20em);
+      margin: 0 auto;
+      aspect-ratio: 5 / 4;
+      background: black;
+      overflow: hidden;
+    }
+
+    #out::after{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      z-index: 200;
+      border: 10px solid white;
+      box-sizing: border-box;
+    }
+    
+    .layers{
+      position: absolute;
+      height:100%;
+      width:100%;   
+      background-size: contain !important;
+      z-index: 100;
+      transition: transform 0.1s linear;
+    }
+</style>
+
+<div id="out">
+</div>
+你可以试试用鼠标在上面移动。
+
+<script>
+    let out = document.getElementById("out")
+
+    let arr = [0.005,0.01,0.019,0.022,0.03,0.05];
+    for(let i=0; i<6; ++i){
+        let o = document.createElement('img');
+        o.className = "layers"
+        o.src = `./src/${i+1}.png`
+        arr[i] = {o, f:arr[i]};
+        out.appendChild(o);
+    }	
+    
+    let info = document.getElementById("ixx");
+    
+    let wh = out.getBoundingClientRect();
+    window.addEventListener("resize", ()=>{
+        wh = out.getBoundingClientRect()
+    });
+
+    const setpos = (x,y)=>{
+      for(a of arr){
+        let {width:wo,height:ho} = wh;
+        let ws = wo*a.f, hs = ho*a.f;
+        ws = ws*x/2;
+        hs = hs*y/2;
+        a.o.style.transform = `translate(${ws}px,${hs}px)`
+      }
+    }
+
+    let t = 0.0;
+    const autoshow = ()=>{
+      t += 0.05;
+      x = Math.cos(t*Math.PI)*0.7, y = Math.sin(t*1.2)*0.7;
+      setpos(x,y);
+    }
+    let xid = setInterval(autoshow, 50);
+    
+    out.addEventListener("mousemove",(e)=>{  
+      clearInterval(xid)
+      let x=e.offsetX/wh.width*2-1, y=e.offsetY/wh.height*2-1; 
+      setpos(x,y);
+    })
+    
+    out.addEventListener("mouseout",(e)=>{ 
+      xid = setInterval(autoshow, 50);
+    })
+
+</script>
