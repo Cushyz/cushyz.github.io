@@ -3,9 +3,14 @@
 layout: post
 title: 动态作品测试
 tags: 美术
-
 ---
 
+你可以试试用鼠标在上面移动。
+
+<div id="out">
+</div>
+
+<!--more-->
 
 <style>
     #out{
@@ -37,10 +42,6 @@ tags: 美术
     }
 </style>
 
-<div id="out">
-</div>
-你可以试试用鼠标在上面移动。
-
 <script>
     let out = document.getElementById("out")
 
@@ -48,7 +49,7 @@ tags: 美术
     for(let i=0; i<6; ++i){
         let o = document.createElement('img');
         o.className = "layers"
-        o.src = `./atsrc/${i+1}.png`
+        o.src = `{{ site.url }}/atsrc/${i+1}.png`
         arr[i] = {o, f:arr[i]};
         out.appendChild(o);
     }	

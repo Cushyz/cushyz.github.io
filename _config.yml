@@ -15,6 +15,8 @@ nav:
   - text: 文章列表
     url:  '/archives'
 
+excerpt_separator: <!--more-->
+
 gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "archives/:num/"

@@ -14,7 +14,7 @@ title: 首页
         <a class="morelink" href="{{link}}" >更多</a>
         <h1><a class="titlelink" href="{{ link }}">{{ post.title }}</a></h1>
         <hr/>
-        <div class="cntnt">{{ post.content | truncate:200,'……' }}</div>
+        <div class="cntnt">{{ post.excerpt }}</div>
     </article>
     {% endif %}
 {% endfor %}
